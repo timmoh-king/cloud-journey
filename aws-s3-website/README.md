@@ -1,27 +1,6 @@
 ## Deploying a React App to Amazon S3
 A step-by-step guide to hosting your React application as a static website on AWS S3, with an optional CloudFront CDN setup for HTTPS and global performance.
-
-Developer Machine
-      │
-      ▼
-[npm run build] ──► build/ folder (HTML, CSS, JS)
-      │
-      ▼ aws s3 sync
-      │
-┌─────────────────────────────┐
-│         Amazon S3           │
-│  Static Website Hosting     │
-│  + Public Bucket Policy     │
-└─────────────────────────────┘
-      │
-      ▼ (Optional — Recommended for Production)
-┌──────────────────────────────────────────────┐
-│  Route 53  ──►  ACM Cert  ──►  CloudFront   │
-│  (Domain)     (HTTPS/SSL)    (CDN + Cache)   │
-└──────────────────────────────────────────────┘
-      │
-      ▼
-  🌐 Browser — React app loads & runs client-side
+![Architecture Diagram](./screenshots/architecture%20diagram.png)
 
 ##  Prerequisites
 - Node.js and npm installed
